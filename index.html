@@ -4,8 +4,12 @@
     <meta charset="utf-8">
     <title>QuantAgents: Multi-Agent Trading System</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,400&display=fallback" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,400&display=fallback" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Base styles */
         * {
@@ -21,6 +25,7 @@
             --text-primary: #1e293b;
             --text-secondary: #64748b;
             --text-tertiary: #94a3b8;
+            --text-affiliations: #636363;
             --border-color: #e2e8f0;
             --shadow-color: rgba(0, 0, 0, 0.1);
             --background-header: #f8fafc;
@@ -35,6 +40,7 @@
             --text-primary: #ffffff;
             --text-secondary: #ffffff;
             --text-tertiary: #ffffff;
+            --text-affiliations: #ffffff;
             --border-color: #334155;
             --shadow-color: rgba(0, 0, 0, 0.3);
             --background-header: #1e293b;
@@ -219,12 +225,15 @@
         }
 
         .main-title {
-            font-size: 4.0rem;
-            font-weight: 900;
+            font-family: 'Inter', sans-serif;
+            font-size: 64px;
+            font-weight: 800;
             color: var(--text-primary);
             margin-bottom: 0.5rem;
             line-height: 1.0;
+            letter-spacing: -0.02em;
             transition: color 0.3s ease;
+            text-align: center;
         }
 
         .subtitle {
@@ -237,7 +246,7 @@
         }
 
         .authors {
-            font-size: 1.5rem;
+            font-family: 'Inter', sans-serif;
             color: var(--text-secondary);
             margin-bottom: 1rem;
             margin-top: 2.2rem;
@@ -246,11 +255,12 @@
             gap: 2rem;
             flex-wrap: wrap;
             transition: color 0.3s ease;
+            font-weight: 300; 
         }
 
         .affiliations {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
+            font-size: 1.1rem;
+            color: var(--text-affiliations);
             line-height: 1.8;
             transition: color 0.3s ease;
             max-width: 780px;
@@ -258,12 +268,13 @@
             margin-right: auto;
             text-align: center; 
             margin-top: 1.7rem;
+            
         }
 
         .author-link {
             color: #0644AD;
             text-decoration: none;
-            font-weight: 500;
+            /* font-weight: 500; */
             transition: color 0.3s ease;
         }
 
@@ -628,7 +639,7 @@
         /* Responsive design */
         @media (max-width: 768px) {
             .main-title {
-                font-size: 2rem;
+                font-size: 4rem;
             }
 
             .subtitle {
@@ -784,18 +795,24 @@
                 <!-- Title Section -->
         <section class="title-section">
             <h1 class="main-title fade-in-up">
-                <span style="display: block; font-size: 4.2rem; font-weight: 800; color: var(--text-primary); line-height: 1.0;">QuantAgent:</span>
-                <span style="display: block; font-size: 2.15rem; font-weight: 900; color: var(--text-primary); line-height: 1.0; margin-top: 1.7rem;">Price-Driven Multi-Agent LLMs for High-Frequency Trading</span>
+                <span style="display: block; font-size: 4.0rem; font-weight: 800; color: var(--text-primary); line-height: 1.0;">QuantAgent:</span>
+                <span style="display: block; font-size: 1.875rem; font-weight: 800; color: var(--text-primary); line-height: 1.0; margin-top: 1.7rem; letter-spacing: -0.02em;">
+                    Price-Driven Multi-Agent LLMs for High-Frequency Trading</span>
             </h1>
-            <div class="authors fade-in-delay-1">
+            <div class="fade-in-delay-1 authors" style="font-family: 'Inter', sans-serif; font-weight: 400 !important; font-size: 1.3rem; color: var(--text-secondary);">
                 <span><a href="https://machineily.github.io/" class="author-link">Fei Xiong</a><sup>1,2 ★</sup></span>
                 <span><a href="https://wyattz23.github.io" class="author-link">Xiang Zhang</a><sup>3 ★</sup></span>
                 <span><a href="https://intersun.github.io/" class="author-link">Siqi Sun</a><sup>4</sup></span>
                 <span><a href="https://chenyuyou.me/" class="author-link">Chenyu You</a><sup>1</sup></span>
             </div>
-                <div class="affiliations fade-in-delay-2">
-                 <div><sup>1</sup>Stony Brook University, <sup>2</sup>Carnegie Mellon University, <sup>3</sup>University of British Columbia</div>
-                 <div><sup>4</sup>Fudan University, ★ Equal Contribution</div>
+                                 <div class="affiliations fade-in-delay-2" style="font-family: 'Inter', sans-serif; 
+                 font-weight: 400 !important; font-size: 1.15rem; color: var(--text-affiliations); line-height: 1.5;">
+                 <div><sup>1</sup>Stony Brook University&nbsp;&nbsp;&nbsp;
+                    <sup>2</sup>Carnegie Mellon University</div>
+                    <div><sup>3</sup>University of British Columbia&nbsp;&nbsp;&nbsp;
+                        <sup>4</sup>Fudan University&nbsp;&nbsp;&nbsp;
+                     <sup>★</sup>
+                     Equal Contribution</div>
              </div>
             <div class="action-buttons fade-in-delay-3">
                 <a href="#" class="action-btn paper-btn">
@@ -963,7 +980,8 @@
                 </div>
                 <div style="text-align: center; margin-top: 0rem;">
                     <p class="figure-caption" style="font-size: 1rem; color: var(--text-secondary); line-height: 1.6; max-width: 850px; margin: 0 auto; margin-top: 0.5rem;">
-                        Performance comparison across assets between a random baseline and our method (highlighted in green). 
+                        Performance comparison across assets between a random baseline and our method (highlighted in 
+                        <span style="color: #66BB6A;">green</span>). 
                         Bolded values and upward arrows indicate improvements on metrics where higher is better.</p>
                 </div>
             </div>
@@ -1019,8 +1037,7 @@
                             <img src="assets/trend case.png" alt="Trend Case Study" style="max-width: 100%; height: auto; border-radius: 12px; 
                             box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1); margin-bottom: 0.5rem;">
                             <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.6; max-width: 850px; margin: 0 auto;">
-                                TrendAgent case study on DJI, detecting upward resistance and flat support with higher highs/lows. Three summaries support its bullish view, marked by a green “Bullish Signal” badge.
-                            </p>
+                                TrendAgent identifies an upward trend characterized by higher highs and stable support. The price currently hovers near the resistance line, reflecting recent bullish momentum.                            </p>
                         </div>
                     </div>
                     
@@ -1039,22 +1056,39 @@
 
 
 
-        <!-- Bibliography -->
         <section id="bibtex" style="margin-bottom: 8rem;">
-            <h2 class="section-header">BibTeX</h2>
-            <div style="display: flex; justify-content: center; margin-top: 2rem;">
-                <div style="background: var(--bg-secondary); padding: 2rem; border-radius: 8px; font-family: 'Courier New',
-                 monospace; font-size: 1rem; color: var(--text-primary); line-height: 1.6; max-width: 900px; width: 100%; transition: all 0.3s ease;">
-                    <pre style="margin: 0; white-space: pre-wrap;">@article{xiong2025quantagent,
+  <h2 class="section-header">BibTeX</h2>
+  <div style="display: flex; justify-content: center;">
+    <div style="
+      background: var(--bg-secondary);
+      padding: 2rem;
+      border-radius: 8px;
+      font-family: Menlo, Consolas, 'Courier New', monospace;
+      font-size: 1rem;
+      color: var(--text-primary);
+      line-height: 1.6;
+      max-width: 750px;  /* reduced from 900px */
+      width: 100%;
+      transition: all 0.3s ease;
+      margin: 0 0rem;     /* adds space on sides for small screens */
+      max-height: 240px;
+    ">
+      <pre style="
+        margin: 0;
+        padding: 0rem;
+        white-space: pre-wrap;
+      ">
+@article{xiong2025quantagent,
   title={QuantAgent: Price-Driven Multi-Agent LLMs for High-Frequency Trading},
   author={Xiong, Fei and Zhang, Xiang and Sun, Siqi and You, Chenyu},
   journal={arXiv preprint arXiv:2XXX.XXXXX},
   year={2025}
-}</pre>
-                </div>
-            </div>
-        </section>
-    </main>
+}
+      </pre>
+    </div>
+  </div>
+</section>
+
 
          <!-- Footer -->
      <footer style="background: var(--bg-secondary); padding: 2rem; margin-top: 4rem; border-top: 1px solid var(--border-color); transition: all 0.3s ease;">
