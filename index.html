@@ -738,15 +738,15 @@
                  <!-- Abstract Section -->
          <section id="abstract">
              <h2 class="section-header">Abstract</h2>
-                           <div style="background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%); padding: 2rem; border-radius: 20px; box-shadow: 0 10px 25px -5px var(--shadow-color); margin-bottom: 4rem; max-width: 1200px; margin-left: auto; margin-right: auto;">
-                 <p style="font-size: 1.6rem; color: var(--text-primary); line-height: 1.8; margin-bottom: 1.5rem; font-weight: 500;">
+                           <div style="background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%); padding: 6rem; border-radius: 20px; box-shadow: 0 10px 25px -5px var(--shadow-color); margin-bottom: 4rem; max-width: 1400px; margin-left: auto; margin-right: auto;">
+                 <p style="font-size: 1.7rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
                      Recent advances in Large Language Models (LLMs) have demonstrated impressive capabilities in financial reasoning 
                      and market understanding. However, existing LLM frameworks for High-Frequency Trading (HFT) face significant 
                      limitations in terms of latency, interpretability, and the ability to handle real-time market dynamics. 
                      We introduce QuantAgent, the first multi-agent LLM framework specifically designed for HFT, which decomposes 
                      trading into four specialized agents: Indicator, Pattern, Trend, and Risk.
                  </p>
-                 <p style="font-size: 1.6rem; color: var(--text-primary); line-height: 1.8; font-weight: 500;">
+                 <p style="font-size: 1.7rem; color: var(--text-secondary); line-height: 1.6;">
                      Our framework leverages structured financial priors and language-native reasoning to achieve superior performance 
                      in zero-shot evaluations across ten financial instruments, including Bitcoin and Nasdaq futures, in terms of 
                      predictive accuracy and cumulative return over 4-hour trading intervals. The results suggest that combining 
@@ -1009,7 +1009,7 @@
                     header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.3)';
                 } else {
                     header.style.background = '#f8fafc';
-                    header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
                 }
             } else {
                 if (currentTheme === 'dark') {
@@ -1017,7 +1017,7 @@
                     header.style.boxShadow = 'none';
                 } else {
                     header.style.background = '#f8fafc';
-                    header.style.boxShadow = 'none';
+                header.style.boxShadow = 'none';
                 }
             }
         });
