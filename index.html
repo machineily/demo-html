@@ -26,6 +26,7 @@
             --text-secondary: #64748b;
             --text-tertiary: #94a3b8;
             --text-affiliations: #636363;
+            --author-link-color: #0644AD;
             --border-color: #e2e8f0;
             --shadow-color: rgba(0, 0, 0, 0.1);
             --background-header: #f8fafc;
@@ -41,6 +42,7 @@
             --text-secondary: #ffffff;
             --text-tertiary: #ffffff;
             --text-affiliations: #ffffff;
+            --author-link-color: #ffffff;
             --border-color: #334155;
             --shadow-color: rgba(0, 0, 0, 0.3);
             --background-header: #1e293b;
@@ -272,14 +274,14 @@
         }
 
         .author-link {
-            color: #0644AD;
+            color: var(--author-link-color);
             text-decoration: none;
             /* font-weight: 500; */
             transition: color 0.3s ease;
         }
 
         .author-link:hover {
-            color: #0644AD;
+            color: var(--author-link-color);
             text-decoration: underline;
         }
 
@@ -795,11 +797,14 @@
                 <!-- Title Section -->
         <section class="title-section">
             <h1 class="main-title fade-in-up">
-                <span style="display: block; font-size: 4.0rem; font-weight: 800; color: var(--text-primary); line-height: 1.0;">QuantAgent:</span>
-                <span style="display: block; font-size: 1.875rem; font-weight: 800; color: var(--text-primary); line-height: 1.0; margin-top: 1.7rem; letter-spacing: -0.02em;">
+                <div style="display: flex; align-items: center; justify-content: center; gap: 0rem; margin-bottom: 0.5rem;">
+                    <img id="theme-logo" src="assets/logo.png" alt="QuantAgent Logo" style="width: 7rem; height: 7rem; object-fit: contain;">
+                    <span style="font-size: 4.0rem; font-weight: 800; color: var(--text-primary); line-height: 1.0;">QuantAgent:</span>
+                </div>
+                <span style="display: block; font-size: 1.875rem; font-weight: 800; color: var(--text-primary); line-height: 1.0; letter-spacing: -0.02em;">
                     Price-Driven Multi-Agent LLMs for High-Frequency Trading</span>
             </h1>
-            <div class="fade-in-delay-1 authors" style="font-family: 'Inter', sans-serif; font-weight: 400 !important; font-size: 1.3rem; color: var(--text-secondary);">
+            <div class="fade-in-delay-1 authors" style="font-family: 'Inter', sans-serif; font-weight: 400 !important; font-size: 1.3rem;">
                 <span><a href="https://machineily.github.io/" class="author-link">Fei Xiong</a><sup>1,2 ★</sup></span>
                 <span><a href="https://wyattz23.github.io" class="author-link">Xiang Zhang</a><sup>3 ★</sup></span>
                 <span><a href="https://intersun.github.io/" class="author-link">Siqi Sun</a><sup>4</sup></span>
@@ -896,48 +901,53 @@
                 <!-- Indicator Tab -->
                 <div class="tab-pane active" id="indicator-tab" style="display: block; width: 100%; max-width: 1100px;">
                     <div style="text-align: center; max-width: 100%; margin: 0 auto;">
-                        <img src="assets/indicator.png" alt="Indicator Agent" style="max-width: 100%;
-                        height: auto; border-radius: 12px; box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1); margin-bottom: 0.2rem;">
-                        <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.6; max-width: 850px; margin: 0 auto;">
-                            Comprehensive technical analysis using multiple indicators including RSI, MACD, and Bollinger Bands 
+
+                        <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.6; max-width: 850px; margin: 0 auto; margin-bottom: 1rem;">
+                            <strong>Indicator Agent</strong>: Comprehensive technical analysis using multiple indicators including RSI, MACD, and Bollinger Bands 
                             to generate robust trading signals with high accuracy.
                         </p>
+                        <img src="assets/indicator.png" alt="Indicator Agent" style="max-width: 100%;
+                        height: auto; border-radius: 12px; box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1); margin-bottom: 0.2rem;">
+                        
                     </div>
                 </div>
                 
                 <!-- Pattern Tab -->
                 <div class="tab-pane" id="pattern-tab" style="display: none; width: 100%;">
                     <div style="text-align: center; max-width: 100%; margin: 0 auto;">
-                        <img src="assets/pattern.png" alt="Pattern Agent" style="max-width: 100%; height: auto; border-radius: 12px; 
-                        box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1); margin-bottom: 0.2rem;">
-                        <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.6; max-width: 850px; margin: 0 auto;">
-                            Sophisticated pattern recognition systems detect classic chart patterns and market structures, 
+                        <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.6; max-width: 850px; margin: 0 auto; margin-bottom: 0.2rem;">
+                            <strong>Pattern Agent</strong>: Sophisticated pattern recognition systems detect classic chart patterns and market structures, 
                             providing reliable signals for trading decisions.
                         </p>
+                        <img src="assets/pattern.png" alt="Pattern Agent" style="max-width: 100%; height: auto; border-radius: 12px; 
+                        box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1); margin-bottom: 0.2rem;">
+                        
                     </div>
                 </div>
                 
                 <!-- Trend Tab -->
                 <div class="tab-pane" id="trend-tab" style="display: none; width: 100%;">
                     <div style="text-align: center; max-width: 100%; margin: 0 auto;">
-                        <img src="assets/trend.png" alt="Trend Agent" style="max-width: 100%; height: auto; border-radius: 12px; 
-                        box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1); margin-bottom: 0.2rem;">
-                        <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.6; max-width: 850px; margin: 0 auto;">
-                            Advanced trend detection algorithms identify market direction and momentum patterns, 
+                        <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.6; max-width: 850px; margin: 0 auto; margin-bottom: 0.2rem;">
+                            <strong>Trend Agent</strong>: Advanced trend detection algorithms identify market direction and momentum patterns, 
                             enabling precise entry and exit timing for optimal trading performance.
                         </p>
+                        <img src="assets/trend.png" alt="Trend Agent" style="max-width: 100%; height: auto; border-radius: 12px; 
+                        box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1); margin-bottom: 0.2rem;">
+                        
                     </div>
                 </div>
                 
                 <!-- Decision Tab -->
                 <div class="tab-pane" id="decision-tab" style="display: none; width: 100%;">
                     <div style="text-align: center; max-width: 100%; margin: 0 auto;">
-                        <img src="assets/decision.png" alt="Decision Agent" style="max-width: 100%; height: auto; 
-                        border-radius: 12px; box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1); margin-bottom: 0.2rem;">
-                        <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.6; max-width: 850px; margin: 0 auto;">
-                            Intelligent decision-making systems combine multiple data sources and analysis methods 
+                        <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.6; max-width: 850px; margin: 0 auto; margin-bottom: 0.2rem;">
+                            <strong>Decision Agent</strong>: Intelligent decision-making systems combine multiple data sources and analysis methods 
                             to generate optimal trading strategies with risk management considerations.
                         </p>
+                        <img src="assets/decision.png" alt="Decision Agent" style="max-width: 100%; height: auto; 
+                        border-radius: 12px; box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1); margin-bottom: 0.2rem;">
+                        
                     </div>
                 </div>
             </div>
@@ -1023,34 +1033,34 @@
                     <!-- Rolling Performance Tab -->
                     <div class="results-tab-pane active" id="rolling-tab" style="display: block;">
                         <div style="text-align: center;">
-                            <img src="assets/rolling.png" alt="Rolling Performance" style="max-width: 100%; height: auto; border-radius: 12px; 
-                            box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1); margin-bottom: 0.5rem;">
-                            <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.6; max-width: 850px; margin: 0 auto;">
-                                Sample-based directional accuracy on SPX. Of 10 LLM-generated signals, correct predictions are shown in green/red, errors in grey, yielding 80% accuracy during the highlighted period.
+                            <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.6; max-width: 850px; margin: 0 auto; margin-bottom: 1rem;">
+                                <strong>Rolling Performance</strong>: Sample-based directional accuracy on SPX. Of 10 LLM-generated signals, correct predictions are shown in green/red, errors in grey, yielding 80% accuracy during the highlighted period.
                             </p>
+                            <img src="assets/rolling.png" alt="Rolling Performance" style="max-width: 100%; height: auto; border-radius: 12px; 
+                            box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1);">
                         </div>
                     </div>
                     
                     <!-- Trend Case Study Tab -->
                     <div class="results-tab-pane" id="trendcase-tab" style="display: none;">
                         <div style="text-align: center;">
+                            <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.6; max-width: 850px; margin: 0 auto; margin-bottom: 1rem;">
+                                <strong>Trend Agent</strong> identifies an upward trend characterized by higher highs and stable support. The price currently hovers near the resistance line, reflecting recent bullish momentum.                            </p>
                             <img src="assets/trend case.png" alt="Trend Case Study" style="max-width: 100%; height: auto; border-radius: 12px; 
-                            box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1); margin-bottom: 0.5rem;">
-                            <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.6; max-width: 850px; margin: 0 auto;">
-                                TrendAgent identifies an upward trend characterized by higher highs and stable support. The price currently hovers near the resistance line, reflecting recent bullish momentum.                            </p>
+                            box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1);">
                         </div>
                     </div>
                     
-                    <!-- Pattern Case Study Tab -->
+                                        <!-- Pattern Case Study Tab -->
                     <div class="results-tab-pane" id="patterncase-tab" style="display: none;">
                         <div style="text-align: center;">
+                            <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.6; max-width: 850px; margin: 0 auto; margin-bottom: 1rem;">
+                                <strong>Pattern Agent</strong> identifies a Descending Triangle with lower highs and flat support near 78. 
+                                Structured summaries explain the pattern, bearish bias, and symmetry, with overlays aiding interpretation based solely on bar geometry.                        </p>
                             <img src="assets/pattern case.png" alt="Pattern Case Study" style="max-width: 100%; height: auto; border-radius: 12px;
-                             box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1); margin-bottom: 0.5rem;">
-                            <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.6; max-width: 850px; margin: 0 auto;">
-                                PatternAgent case on CL, identifying a Descending Triangle with lower highs and flat support near 78. 
-                                Structured summaries explain the pattern, bearish bias, and symmetry, with overlays aiding interpretation based solely on bar geometry.                        </div>
+                             box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1);">
+                        </div>
                     </div>
-                </div>
             </div>
         </section>
 
@@ -1261,6 +1271,7 @@
         const currentTheme = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-theme', currentTheme);
         updateThemeIcon(currentTheme);
+        updateThemeLogo(currentTheme);
         
         // Set initial header background
         const header = document.querySelector('.header');
@@ -1279,6 +1290,7 @@
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
             updateThemeIcon(newTheme);
+            updateThemeLogo(newTheme);
             
             // Update header background immediately
             const header = document.querySelector('.header');
@@ -1296,6 +1308,17 @@
                 themeIcon.className = 'fas fa-sun';
             } else {
                 themeIcon.className = 'fas fa-moon';
+            }
+        }
+        
+        function updateThemeLogo(theme) {
+            const logo = document.getElementById('theme-logo');
+            if (logo) {
+                if (theme === 'dark') {
+                    logo.src = 'assets/darklogo.png';
+                } else {
+                    logo.src = 'assets/logo.png';
+                }
             }
         }
     </script>
